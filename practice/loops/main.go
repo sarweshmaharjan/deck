@@ -13,6 +13,10 @@ func main() {
 	for i, card := range cards {
 		fmt.Println(i, card)
 	}
+
+	greeting := []byte("Hi there!")
+	fmt.Println(greeting)
+
 }
 
 func newCard() string {
