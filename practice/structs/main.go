@@ -1,12 +1,13 @@
 package main
 
 import "fmt"
+
 /**
- * Contact Information 
+ * Contact Information
  * @type {struct} contactInformation
  */
-type contactInfo struct{ 
-	email string
+type contactInfo struct {
+	email   string
 	zipCode int
 }
 
@@ -16,35 +17,33 @@ type contactInfo struct{
  */
 type person struct {
 	firstName string
-	lastName string
-	contact contactInfo
+	lastName  string
+	contact   contactInfo
 }
 
-
-func main(){ 
+func main() {
 	/** shortcut - person{"Sarwesh","Maharjan"} */
-	alex := person{firstName:"Alex",lastName:"Anderson"}
-	fmt.Println(alex);
+	alex := person{firstName: "Alex", lastName: "Anderson"}
+	fmt.Println(alex)
 
 	/**
-	 * Another way to assign struct 
+	 * Another way to assign struct
 	 * If no value is assigned it goes to default which is empty string
 	 */
 	var john person
 	fmt.Println(john)
 
-	john.firstName="Sarwesh"
-	john.lastName="Maharjan"
+	john.firstName = "Sarwesh"
+	john.lastName = "Maharjan"
 
 	/** To format print */
 	john.print()
 
-
 	jim := person{
 		firstName: "Jim",
-		lastName: "Shrestha",
+		lastName:  "Shrestha",
 		contact: contactInfo{
-			email: "jim@example.go",
+			email:   "jim@example.go",
 			zipCode: 94100,
 		},
 	}
@@ -57,14 +56,14 @@ func main(){
 	jim.print()
 }
 
-func (p person) print(){
-	fmt.Printf("\n %+v",p)
+func (p person) print() {
+	fmt.Printf("\n %+v", p)
 }
 
-func (pointerToPerson *person) updatef(){
-	(*pointerToPerson).firstName="Sneha"
+func (pointerToPerson *person) updatef() {
+	(*pointerToPerson).firstName = "Sneha"
 }
 
-func (p person) update(){
-	p.firstName="Shristi"
+func (p person) update() {
+	p.firstName = "Shristi"
 }

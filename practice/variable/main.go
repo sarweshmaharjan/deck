@@ -9,7 +9,7 @@ func main() {
 	fmt.Println(deckSize)
 }
 
-/* 
-* Different ways to initialize variable are. 
-* deckSize := 10 ; where ':' means auto assign datatype in accordance to what is used as data. 
-*/
+/*
+* Different ways to initialize variable are.
+* deckSize := 10 ; where ':' means auto assign datatype in accordance to what is used as data.
+ */

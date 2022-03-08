@@ -10,18 +10,18 @@ func main() {
 
 	addresses := make(map[string]string)
 	addresses["home"] = "Paknajol,kathmandu,nepal"
-	addresses["work"] ="somewhere"
-	
+	addresses["work"] = "somewhere"
+
 	fmt.Println(addresses)
-	
-	delete(addresses,"work")
+
+	delete(addresses, "work")
 
 	printMap(addresses)
 	fmt.Println(colors)
 }
 
-func printMap(c map[string]string){
-	for index,address := range c{
-		fmt.Printf("The address is %s in position %s \n",address,index)
+func printMap(c map[string]string) {
+	for index, address := range c {
+		fmt.Printf("The address is %s in position %s \n", address, index)
 	}
 }
